@@ -114,7 +114,18 @@ function App() {
               {currentGroup.groupNotes.map((note, index) => (
                 <div key={index} className="note-text">
                   <p className='textnotes'>{note.text}</p>
-                  <small classname='timestamps'>{new Date(note.timestamp).toLocaleString()}</small>
+                  <small className='timestamps'>
+                    {new Date(note.timestamp).toLocaleDateString('en-US', {
+                      day: '2-digit',
+                      month: 'short',
+                      year: 'numeric',
+                    })}{' '}
+                    {new Date(note.timestamp).toLocaleTimeString('en-US', {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                      hour12: true,
+                    })}
+                  </small>
                 </div>
               ))}
             </div>

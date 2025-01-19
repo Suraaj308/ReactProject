@@ -36,12 +36,16 @@
   height: 15%;
   font-size: 25px;
   font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .sl1.l12 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  overflow-y: auto;
+  justify-content: flex-start;
   width: 100%;
   height: 70%;
   background-color: rgb(255, 255, 255);
@@ -73,6 +77,11 @@
 }
 
 .sr1.r11.r1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  gap: 15px;
   background-color: #001f8b;
   height: 100%;
   font-size: 25px;
@@ -90,14 +99,23 @@
   text-transform: uppercase;
 }
 
-.noteHeading{
-    margin: 0px;
-    font-size: 50px;
+.textnotes {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  word-wrap: break-word; 
+  word-break: break-word;
+  white-space: normal;
 }
 
-.noteFooter{
-    margin-top:10px;
-    font-size: 20px;
+.noteHeading {
+  margin: 0px;
+  font-size: 50px;
+}
+
+.noteFooter {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .sr1.r12 {
@@ -114,13 +132,13 @@
 }
 
 .sr1.r12::-webkit-scrollbar-track {
-  background: #f0f0f0; 
-  border-radius: 10px; 
+  background: #f0f0f0;
+  border-radius: 10px;
 }
 
 .sr1.r12::-webkit-scrollbar-thumb {
   background: #a0a0a0;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .sr1.r12::-webkit-scrollbar-thumb:hover {
@@ -165,7 +183,7 @@
 .group-short {
   width: 50px;
   height: 50px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
   margin-inline: 10px;
   align-items: center;
